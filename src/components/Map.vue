@@ -81,7 +81,7 @@
   </div>
 
   <div>    
-    <Products v-bind:placeId="tmpId" /> 
+    <Products v-bind:placeId="tmpId" @product="myAlert" /> 
 
   </div>
   
@@ -106,6 +106,9 @@ export default {
    getProd:function(ev){
       this.tmpId = ev.target.attributes.placeId.value;
    },
+   myAlert(value){
+      alert(value);
+   }
   },
    components: {
       Products

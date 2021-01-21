@@ -38,7 +38,7 @@ export default {
   },
   methods:{
     chooseProd(ev){
-      alert(ev);
+      this.$emit('product', ev);
     }
   }
 
