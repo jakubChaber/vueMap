@@ -1,8 +1,8 @@
 <template>
   <div class="map">
 
-   <div  style="display:flex; flex-flow:column!important;">
-        <div class="d-flex justify-content-center col-sm" style="min-height:500px; flex-flow:column;">
+   <div  style="display:flex;">
+        <div class="d-flex justify-content-center col-sm" style="min-height:500px; ">
         
          <svg
          width="400"
@@ -80,10 +80,9 @@
       </div>
   </div>
 
-  <div class="row">    
+  <div>    
     <Products v-bind:placeId="tmpId" /> 
 
-    
   </div>
   
 </template>
@@ -107,7 +106,6 @@ export default {
    getProd:function(ev){
       this.tmpId = ev.target.attributes.placeId.value;
    },
-
   },
    components: {
       Products

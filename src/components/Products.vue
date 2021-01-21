@@ -1,10 +1,10 @@
 
 <template>
-   <div class="container">{{selectedVoyewodship}} </div>
-   <div>
-    <div v-for="prod in products"  v-bind:key="prod">
+   <div class="row"><div class="col">wojewódźtwo {{selectedVoyewodship}} </div></div>
+   <div class="row">
+    <div class="col" v-for="prod in products"  v-bind:key="prod">
     <div>{{prod.name}} -- {{prod.imgUrl}}</div>
-    
+    <button v-on:click="chooseProd(prod.name)">click</button>
     </div>
   </div>
 </template>
@@ -35,6 +35,11 @@ export default {
       selectedVoyewodship:'',
       products:[]
     }
+  },
+  methods:{
+    chooseProd(ev){
+      alert(ev);
+    }
   }
 
 }
@@ -59,7 +64,7 @@ export default {
   flex-flow:row;
   flex-wrap:nowrap;
   align-items: stretch;
-transition:.2s ease-in-out;
+  transition:.2s ease-in-out;
 }
 .screen{
   height: calc( 100% - 24px );
