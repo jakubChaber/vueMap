@@ -1,4 +1,4 @@
-# first-project
+# first project in vue
 
 ## Project setup
 ```
